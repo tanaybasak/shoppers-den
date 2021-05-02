@@ -9,14 +9,14 @@ import shopReducer from "./shop/shop.reducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ['cart'], //reducer name we want to persist
+  whitelist: ["cart"], //reducer name we want to persist
 };
 
 const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer,
-  directory : directoryReducer,
-  shop:  shopReducer
+  directory: directoryReducer,
+  shop: shopReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
